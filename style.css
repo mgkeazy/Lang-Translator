@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    background: #232B2B;
+}
+.row{
+    width: 40%;
+}
+.container {
+    width: 1000px;
+    background: #FAF9F6;
+    border-radius: 7px;
+    padding: 30px;
+}
+
+.wrapper {
+    border-radius: 5px;
+    border: 1px solid #bbb;
+}
+
+.wrapper .text-input {
+    display: flex;
+    border-bottom: 1px solid rgb(226, 212, 212);
+}
+
+.wrapper .lang-detect {
+    height: 50px;
+    display: flex;
+    border-bottom: 1px solid rgb(226, 212, 212);
+}
+
+.text-input .to-text {
+    border-radius: 0px;
+    border: 1px solid rgb(226, 204, 204);
+    flex: 1; /* Make to-text take remaining space */
+}
+.to-text{
+    width: 80%;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Make input-area take remaining space */
+}
+
+.text-input textarea {
+    height: 255px;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 18px;
+    border-radius: 5px;
+    background: none;
+    padding: 10px 15px;
+}
+
+.controls, .controls li, .icons, .icons i {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls {
+    list-style: none;
+    padding: 12px 15px;
+}
+
+.container .row.from .icons {
+    border-right: 1px solid rgb(214, 185, 185);
+    padding-right: 15px;
+}
+
+.container .row.to .icons {
+    border-left: 1px solid #bbb;
+    padding-left: 15px;
+}
+
+.controls .icons {
+    width: 38%;
+}
+
+.controls .icons i {
+    width: 50px;
+    color: #9f9f9f;
+    font-size: 14px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.controls .row select {
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background: none;
+}
+
+.controls .exchange {
+    color: #9f9f9f;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#translateBtn, #snapshotBtn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 5px;
+    background: #232B2B;
+}
+
+#capture,#reset-button {
+    width: auto;
+    padding: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 5px;
+    background: #232B2B;
+    display: block; /* Ensures the button is a block-level element */
+    margin-left: auto; /* Centers the button horizontally */
+    margin-right: auto; /* Centers the button horizontally */
+}
+
+
+#reset-button{
+    background: red;
+}
+
+#video {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto; /* Center the video horizontally */
+    display: block; /* Remove any default inline display */
+}
+
+#canvas {
+    /* Display none by default */
+}
+
+#snap {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 5px;
+    background: #232B2B;
+}
+
+.container button:hover {
+    color: red;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.credit-footer {
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .text-input textarea {
+        height: 200px;
+        font-size: 16px;
+    }
+
+    .controls .icons i {
+        font-size: 14px;
+    }
+
+    #translateBtn, #snapshotBtn {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    .text-input textarea {
+        height: 150px;
+        font-size: 14px;
+    }
+
+    .controls .icons i {
+        font-size: 12px;
+    }
+
+    #translateBtn, #snapshotBtn {
+        font-size: 14px;
+    }
+}
